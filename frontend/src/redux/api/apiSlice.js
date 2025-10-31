@@ -7,3 +7,9 @@ export const apiSlice = createApi({
   baseQuery,
   endpoints: () => ({}),
 });
+
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+
+axios.get(`${API_URL}/api/movies`)
+  .then(res => console.log(res.data));
+
